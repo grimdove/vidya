@@ -109,3 +109,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+document.querySelector('a[href="#misc"]').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const targetSection = document.getElementById('misc');
+  const offset = targetSection.offsetTop;
+  const scrollOptions = {
+    top: offset,
+    behavior: 'smooth'
+  };
+
+  window.scrollTo(scrollOptions);
+});
+
+document.querySelector('a[href="#"]').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const scrollOptions = {
+    top: 0,
+    behavior: 'smooth'
+  };
+
+  window.scrollTo(scrollOptions);
+});
